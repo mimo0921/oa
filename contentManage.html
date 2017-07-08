@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no'>
+	<title>内容管理</title>
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src='jquery-1.11.3.min.js'></script>
+	<script type="text/javascript" src='bootstrap.js'></script>
+	<script type="text/javascript" src='echarts.min.js'></script>
+	<style type="text/css">
+	.v{width:50px;height:50px;}
+		.color{color:#337bb6;}
+		
+
+
+
+	</style>
+</head>
+<body>
+<nav class="navbar navbar-default">
+<div class='container'>
+  <div class="container-fluid">
+    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+      	<a class="navbar-brand" href="#">OA办公系统</a>
+    </div>
+
+   
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html"><span class='glyphicon glyphicon-home'></span> 管理首页<span class="sr-only">(current)</span></a></li>
+        <li><a href="user.html"><span class='glyphicon glyphicon-user'></span> 用户管理</a></li>
+        <li class="active"><a href="#"><span class='glyphicon glyphicon-user'></span> 内容管理</a></li>
+        <li><a href="titleManege.html"><span class='glyphicon glyphicon-tags'></span> 标签管理</a></li>
+        <li><a href="myEmail.html"><span class='glyphicon glyphicon-envelope'></span> 我的邮箱</a></li>
+      </ul>
+   
+      <ul class="nav navbar-nav navbar-right">
+      	<li><img src="images/pic_11.jpg" class="img-circle v img-responsive "></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">管理员<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">管理页面1</a></li>
+            <li><a href="#">管理页面1</a></li>
+            <li><a href="#">管理页面1</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">管理页面1</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class='container'>
+	<div class='row'>
+		<div class='col-md-2'>
+			<ul class="list-group">
+				  <a href='user_search.html' class='list-group-item active'>内容管理</a>
+				  <a href='user.html' class='list-group-item' data-toggle="modal" data-target="#myModal">添加内容</a>			
+			</ul>
+		</div>
+		<div class='col-md-10'>
+			<label type='text'>内容管理</label>
+			<ul class="nav nav-tabs">
+			  <li role="presentation" class="active"><a href="#">内容管理</a></li>
+			  <li role="presentation" data-toggle="modal" data-target="#myModal"><a href="#">添加内容</a></li>
+		 
+			</ul>
+		 	<table class='table'>
+				<thead>
+					<tr><td>文章标题</td><td>作者</td><td>发布时间</td><td>操作</td></tr>
+				</thead>
+				<tbody>
+					<tr><td>盘点今年十大经典电影</td><td>小李飞刀</td><td>2017/08/08</td>
+					<td>
+					<div class="dropdown">
+  						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+  						操作
+   							<span class="caret"></span>
+  						</button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					    <li><a href="#">增加</a></li>
+					    <li><a href="#">删除</a></li>
+					    <li><a href="#">编辑</a></li>
+					    <li><a href="#">查询</a></li>
+					  </ul>
+					</div>
+					</td>
+					</tr>
+
+				
+					<tr><td>产品经理常犯的7大错误，你造吗？</td><td>欧阳菲菲</td><td>2017/08/08</td>
+					<td>
+					<div class="dropdown">
+  						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+  						操作
+   							<span class="caret"></span>
+  						</button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					    <li><a href="#">增加</a></li>
+					    <li><a href="#">删除</a></li>
+					    <li><a href="#">编辑</a></li>
+					    <li><a href="#">查询</a></li>
+					  </ul>
+					</div>
+					</td>
+					</tr>
+
+
+
+					<tr><td>如何正确使用python日志系统</td><td>梅超风</td><td>2017/08/08</td>
+					<td>
+					<div class="dropdown">
+  						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+  						操作
+   							<span class="caret"></span>
+  						</button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					    <li><a href="#">增加</a></li>
+					    <li><a href="#">删除</a></li>
+					    <li><a href="#">编辑</a></li>
+					    <li><a href="#">查询</a></li>
+					  </ul>
+					</div>
+					</td>
+					</tr>
+
+
+					<tr><td>C语言const修饰符的怎么使用</td><td>梅兰芳</td><td>2017/08/08</td>
+					<td>
+					<div class="dropdown">
+  						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+  						操作
+   							<span class="caret"></span>
+  						</button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					    <li><a href="#">增加</a></li>
+					    <li><a href="#">删除</a></li>
+					    <li><a href="#">编辑</a></li>
+					    <li><a href="#">查询</a></li>
+					  </ul>
+					</div>
+					</td>
+					</tr>
+					
+					<tr><td>Android开发用onCreateOptionsMenu()如何</td><td>极客111</td><td>2017/08/08</td>
+					<td>
+					<div class="dropdown">
+  						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+  						操作
+   							<span class="caret"></span>
+  						</button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					    <li><a href="#">增加</a></li>
+					    <li><a href="#">删除</a></li>
+					    <li><a href="#">编辑</a></li>
+					    <li><a href="#">查询</a></li>
+					  </ul>
+					</div>
+					</td>
+					</tr>
+
+
+
+					<tr><td>怎样才能成为优秀的ios开发工程师</td><td>tony</td><td>2017/08/08</td>
+					<td>
+					<div class="dropdown">
+  						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+  						操作
+   							<span class="caret"></span>
+  						</button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					    <li><a href="#">增加</a></li>
+					    <li><a href="#">删除</a></li>
+					    <li><a href="#">编辑</a></li>
+					    <li><a href="#">查询</a></li>
+					  </ul>
+					</div>
+					</td>
+					</tr>
+				</tbody>
+			</table>
+
+
+		<nav aria-label="Page navigation">
+		  <ul class="pagination pull-right">
+		    <li>
+		      <a href="#" aria-label="Previous">
+		        <span aria-hidden="true">&laquo;</span>
+		      </a>
+		    </li>
+		    <li class='active'><a href="#">1</a></li>
+		    <li><a href="#">2</a></li>
+		    <li><a href="#">3</a></li>
+		    <li><a href="#">4</a></li>
+		    <li><a href="#">5</a></li>
+		    <li>
+		      <a href="#" aria-label="Next">
+		        <span aria-hidden="true">&raquo;</span>
+		      </a>
+		    </li>
+		  </ul>
+		</nav>
+
+		</div>
+	</div>
+	<footer class='text-center'>联系方式：123123</footer>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">添加用户</h4>
+      </div>
+      <div class="modal-body">
+        
+     <div class="form-group">
+	    <label for="md1">用户名</label>
+	    <input type="text" class="form-control" id="md1" placeholder="用户名">
+    </div> 
+     <div class="form-group">
+	    <label for="md2">用户密码</label>
+	    <input type="text" class="form-control" id="md2" placeholder="用户密码">
+    </div> 
+     <div class="form-group">
+	    <label for="md3">确认用户密码</label>
+	    <input type="text" class="form-control" id="md3" placeholder="用户密码">
+    </div>  
+    <div class="form-group">
+	    <label for="md4">请输入用户邮箱</label>
+	    <input type="text" class="form-control" id="md2" placeholder="请输入用户邮箱">
+    </div>  
+    <div class="form-group">
+	    <label for="md2">所属用户组</label>
+	    <input type="text" class="form-control" id="md2" placeholder="限制会员">
+    </div>
+
+
+     </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary">提交</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

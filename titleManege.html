@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no'>
+	<title>用户管理</title>
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src='jquery-1.11.3.min.js'></script>
+	<script type="text/javascript" src='bootstrap.js'></script>
+	<script type="text/javascript" src='echarts.min.js'></script>
+	<style type="text/css">
+	.v{width:50px;height:50px;}
+	.bo{padding-bottom:30px;border-bottom:1px solid #ededed;width:100%;height:1px;}	
+	</style>
+</head>
+<body>
+<nav class="navbar navbar-default">
+<div class='container'>
+  <div class="container-fluid">
+    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+      	<a class="navbar-brand" href="#">OA办公系统</a>
+    </div>
+
+   
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html"><span class='glyphicon glyphicon-home'></span> 管理首页<span class="sr-only">(current)</span></a></li>
+        <li><a href="user.html"><span class='glyphicon glyphicon-user'></span> 用户管理</a></li>
+        <li><a href="contentManage.html"><span class='glyphicon glyphicon-user'></span> 内容管理</a></li>
+        <li class="active"><a href="#"><span class='glyphicon glyphicon-tags'></span> 标签管理</a></li>
+        <li><a href="myEmail.html"><span class='glyphicon glyphicon-envelope'></span> 我的邮箱</a></li>
+      </ul>
+   
+      <ul class="nav navbar-nav navbar-right">
+      	<li><img src="images/pic_11.jpg" class="img-circle v img-responsive "></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">管理员<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">管理页面1</a></li>
+            <li><a href="#">管理页面1</a></li>
+            <li><a href="#">管理页面1</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">管理页面1</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+	<div class='container'>
+		<div class='row'>
+			<div class='col-md-12'>
+				<div class="form-group">
+				    <label for="msg" class='h4 bo'>TAG标签管理</label>
+					<div class='row'>					
+						<div class='col-md-10'>					
+							 <input type="text" class="form-control" id="msg" placeholder="请输入要添加的标签">
+						</div>
+						<div class='col-md-2'>						
+							<button type="submit" id='add' class="btn btn-default">添加</button>
+						</div>
+					</div>		 
+				 </div>
+	 		</div>
+		</div>
+	</div>
+
+
+<div class='container'>
+	<div class='row'>
+		<div class='col-md-12' id='passion'>
+
+			<div class='col-md-2 oo'>
+				<div class="alert alert-info alert-dismissible" role="alert">
+					  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" class='del'>&times;</span></button>
+					  <strong>bootstrap</strong>
+
+				 
+				</div>
+			</div>
+
+			<div class='col-md-2 oo'>
+				<div class="alert alert-info alert-dismissible" role="alert">
+					  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" class='del'>&times;</span></button>
+					  <strong>JavaScript</strong>	
+				</div>
+			</div>
+			<div class='col-md-2 oo'>
+				<div class="alert alert-info alert-dismissible" role="alert">
+					  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" class='del'>&times;</span></button>
+					  <strong>前端课程</strong>	
+				</div>
+			</div>
+
+		</div>
+
+
+
+
+
+	</div>
+</div>
+<footer class='text-center'>联系方式：123123</footer>
+
+
+</body>
+</html>
+<script type="text/javascript">
+	var divA = document.getElementById("passion");
+	$('#add').click(function(){
+		var message=$('#msg').val();		
+    	divA.innerHTML+='<div class="col-md-2 oo"><div class="alert alert-info  alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" class="del">&times;</span></button><strong>'+message+'</strong></div></div>';
+   /* 	var oA='<div class="col-md-2 oo"><div class="alert alert-info  alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" class="del">&times;</span></button><strong>'+message+'</strong></div></div>';
+    	oA.appendTo(divA)
+    	console.log(oA)*/
+    	$('#msg').val("")
+    	})
+
+ 	$('.oo').click(function(){
+	$(this).animate({left:"-200",opacity:.1},800,function(){
+		$(this).css({display:"none"})     
+	
+ 	}) 
+ /*	var _this=$(this)
+  	 divA.removeChild(_this);*/
+})
+
+
+
+ 
+
+
+
+	
+
+</script>
